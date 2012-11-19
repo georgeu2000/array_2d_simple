@@ -19,6 +19,7 @@ Or install it yourself as:
 ## Usage
 
 There are 2 ways of setting up the 2D Array:
+
 1. By iterating with #set_by_rc
 2. By passing a block to #set_each
 
