@@ -10,10 +10,12 @@ Gem::Specification.new do |gem|
   gem.email         = ["george@boost-media.com"]
   gem.description   = %q{Implementation of 2D array}
   gem.summary       = %q{Implementation of 2D array}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/georgeu2000/array_2d_simple"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_development_dependency "rspec"
 end
