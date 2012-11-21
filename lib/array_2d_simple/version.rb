@@ -1,3 +1,3 @@
-class Array2dSimple
-  VERSION = "0.1.0"
+module Array2dSimple
+  VERSION = "0.2.0"
 end
