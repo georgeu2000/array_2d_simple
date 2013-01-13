@@ -12,16 +12,47 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it without using Gemfile as:
 
     $ gem install array_2d_simple
 
 ## Usage
 
-There are 2 ways of setting up the 2D Array:
+Initalization:
+You must:
+    require 'array_2d_simple.rb'
+
+And within your model:
+    include Array2dSimple
+
+There are 2 ways of putting data in the 2D Array:
 
 1. By iterating with #set_by_rc
-2. By passing a block to #set_each
+2. By passing a block to #set_each(see below)
+
+
+##Example: A board for tic-tac-toe
+
+    require 'array_2d_simple.rb'
+
+    class Board
+      include Array2dSimple
+
+      def initialize
+        @board = Array2d.new( width:3, height:3 )
+      end
+    end
+
+To fill board with numbers 1-9 and output:
+
+      def fill
+        @board.set_each{ |r, c| r*3 + c+1}
+      end
+
+      def output
+        @board.output
+      end
+
 
 ## Contributing
 
